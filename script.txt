@@ -1,0 +1,89 @@
+drop table rm_sensi
+
+CREATE table rm_sensi(
+cob_date date,
+rec_id int,
+pv numeric(12,2),
+underlying_pv numeric(12,2),
+delta numeric(12,2),
+eq_delta numeric(12,2),
+eq_dollar_delta numeric(12,2),
+eq_gamma numeric(12,2),
+ccy_delta numeric(12,2),
+ccy_dollar_delta_1pct numeric(12,2),
+cmdty_delta numeric(12,2),
+cmdty_dollar_delta_1pct numeric(12,2),
+CS01 numeric(12,2),
+effective_dur numeric(12,2),
+mod_dur numeric(12,2),
+mod_sprd_dur numeric(12,2),
+dv01_risky_curve_up1bp numeric(12,2),
+dv01_risky_curve_down1bp numeric(12,2),
+dv01_yield_curve_up1bp numeric(12,2),
+dv01_yield_curve_down1bp numeric(12,2),
+ir_delta numeric(12,2),
+ir_gamma numeric(12,2),
+ir_dollar_delta_1bp numeric(12,2),
+sprd_delta numeric(12,2),
+sprd_dollar_delta_1bp numeric(12,2),
+theta numeric(12,2),
+vega numeric(12,2),
+vol_dollar_delta_1pct numeric(12,2),
+convexity numeric(12,2),
+gics_Industry varchar(60),
+gics_Industry_Group varchar(60),
+gics_Sector varchar(60),
+gics_Sub_Industry varchar(60),
+icb_Industry varchar(60),
+icb_Sector varchar(60),
+icb_Sub_Sector varchar(60),
+icb_Super_Sector varchar(60),
+primary key (rec_id, cob_date)
+);
+
+select * from rm_sensi
+
+
+Received message: BytesMessage={ Header={ JMSMessageID={ID:ITD-EMS-SERVER.3790580262B4655644:2478} JMSDestination={Topic[drop_agg_risk]} JMSReplyTo={null} JMSDeliveryMode={PERSISTENT} JMSRedelivered={false} JMSCorrelationID={null} JMSType={null} JMSTimestamp={Wed Nov 09 16:00:28 EST 2016} JMSExpiration={0} JMSPriority={4} } Properties={ JMSDeliveryMode={Integer:1} breadcrumbId={String:ID:ITD-EMS-SERVER.3790580262B465578B:178744} } Bytes={148 bytes} }
+
+trade: source: "TT"
+action: EXECUTED
+side: BUY
+symbol: "TN"
+price: 138.625
+size: 2.0
+tradingAccount: "ETF07"
+routeDest: "US,NY"
+execBroker: "8562"
+bbgSymbol: "UXYZ6 Comdty"
+orderId: "0779TG401"
+execId: "1noi0ib118a54t"
+tradeCurrency: "USD"
+tradeDate: 1478649600000
+secId: "00A0LQ00TNZ"
+orderSize: 5.0
+executionTime: 1478725228333
+
+
+Received message: BytesMessage={ Header={ JMSMessageID={ID:ITD-EMS-SERVER.3790580262B4655644:2479} JMSDestination={Topic[drop_agg_risk]} JMSReplyTo={null} JMSDeliveryMode={PERSISTENT} JMSRedelivered={false} JMSCorrelationID={null} JMSType={null} JMSTimestamp={Wed Nov 09 16:00:28 EST 2016} JMSExpiration={0} JMSPriority={4} } Properties={ JMSDeliveryMode={Integer:1} breadcrumbId={String:ID:ITD-EMS-SERVER.3790580262B465578B:178745} } Bytes={149 bytes} }
+
+trade: source: "TT"
+action: EXECUTED
+side: BUY
+symbol: "TN"
+price: 138.625
+size: 1.0
+tradingAccount: "ETF07"
+routeDest: "US,NY"
+execBroker: "8562"
+bbgSymbol: "UXYZ6 Comdty"
+orderId: "0779TG401"
+execId: "1rarf4huwh2sm"
+tradeCurrency: "USD"
+tradeDate: 1478649600000
+secId: "00A0LQ00TNZ"
+orderSize: 5.0
+executionTime: 1478725228333
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'MP', 4500.00 );
